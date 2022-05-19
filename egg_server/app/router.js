@@ -9,5 +9,7 @@ module.exports = app => {
   // router.get('/home/add', controller.home.add);
   // router.post('/home/add', controller.home.createfruit);
   // router.resources('home', '/', controller.home)
-  router.resources('fruit', '/fruit', controller.fruits)
+  // router.resources('fruit', '/fruit', controller.fruits)
+  router.get('/list', controller.jwt.list)
+  router.post('/login', controller.jwt.login)
 };
