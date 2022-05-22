@@ -16,7 +16,7 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1652618418011_7458';
 
   // add your middleware config here
-  config.middleware = ['checktoken'];
+  // config.middleware = ['checktoken'];
 
   // add your user config here
   const userConfig = {
@@ -36,6 +36,15 @@ module.exports = appInfo => {
   }
   config.jwt = {
     secret: 'nanige'
+  }
+  // mysql
+  config.sequelize = {
+    dialect: 'mysql',
+    database: 'nanige',
+    host: 'localhost',
+    port: 3306,
+    username: 'root',
+    password: 'root'
   }
   return {
     ...config,
